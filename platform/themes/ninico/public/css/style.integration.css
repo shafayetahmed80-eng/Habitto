@@ -1,0 +1,660 @@
+/* ==========================================================================
+   HABITTO BD - URBAN MONOCHROME STREETWEAR THEME (OPTION 2)
+   Aesthetic: Represent Clo / Kith / Minimal Urban Studio
+   ========================================================================== */
+
+/* 1. Global Canvas & Typography */
+body {
+    background-color: #FAFAFA !important; /* Crisp Ultra-Light Cool Zinc/Slate */
+    color: #0F172A !important; /* Deep Slate 900 for sharp modern readability */
+}
+
+/* 2. Top Announcement Bar */
+.header-top, .header-top.space-bg {
+    background-color: #0F172A !important;
+    color: #FFFFFF !important;
+    border-bottom: 1px solid #1E293B !important;
+}
+.ae-anno-announcement-wrapper {
+    --background-color: #0F172A !important;
+    --text-color: #FFFFFF !important;
+}
+.header-top a, .header-welcome-text span {
+    color: #FFFFFF !important;
+}
+
+/* 3. Header & Navigation */
+.main-header, .header-sticky {
+    background-color: #FFFFFF !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03) !important;
+}
+.header-navbar-row {
+    min-height: 80px;
+}
+.header-nav-left {
+    min-width: 0;
+}
+.main-header .mainmenu__main {
+    margin-inline-start: 24px !important;
+}
+@media (min-width: 1400px) {
+    .main-header .mainmenu__main {
+        margin-inline-start: 36px !important;
+    }
+}
+.main-menu > nav > ul {
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.main-menu > nav > ul > li {
+    margin-inline-end: 18px !important;
+    white-space: nowrap !important;
+}
+@media (min-width: 1400px) {
+    .main-menu > nav > ul > li {
+        margin-inline-end: 28px !important;
+    }
+}
+.main-menu > nav > ul > li > a {
+    color: #0F172A !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.3px;
+    font-size: 14.5px !important;
+    padding: 26px 0 !important;
+}
+.main-menu > nav > ul > li:hover > a {
+    color: #64748B !important;
+}
+.header-nav-right {
+    margin-inline-start: 16px !important;
+}
+.mainmenu__search {
+    width: auto !important;
+}
+.mainmenu__search-bar input {
+    background-color: #F8FAFC !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 6px !important;
+    color: #0F172A !important;
+    height: 42px !important;
+    width: 170px !important;
+    padding: 5px 15px 5px 38px !important;
+    font-size: 13.5px !important;
+    box-shadow: none !important;
+    transition: width 0.25s ease, border-color 0.2s ease, background-color 0.2s ease !important;
+}
+.mainmenu__search-bar input:focus {
+    border-color: #0F172A !important;
+    background-color: #FFFFFF !important;
+    width: 220px !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06) !important;
+}
+@media (min-width: 1400px) {
+    .mainmenu__search-bar input {
+        width: 190px !important;
+    }
+    .mainmenu__search-bar input:focus {
+        width: 240px !important;
+    }
+}
+.mainmenu__search-icon {
+    inset-inline-start: 12px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+.header-meta {
+    margin-inline-start: 14px !important;
+}
+.header-meta .header-meta__social {
+    margin-left: 10px !important;
+    gap: 16px !important;
+}
+
+/* 4. Product Cards (Urban Studio Aesthetic) */
+.tpproduct {
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 8px !important;
+    padding: 12px 12px 18px 12px !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.tpproduct:hover {
+    border-color: #0F172A !important;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08) !important;
+    transform: translateY(-2px);
+}
+.tpproduct__thumb {
+    background-color: #F1F5F9 !important; /* Cool Studio Light Gray */
+    border-radius: 6px !important;
+    overflow: hidden;
+}
+.tpproduct__title a {
+    color: #0F172A !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.2px;
+}
+.tpproduct__title a:hover {
+    color: #64748B !important;
+}
+.tpproduct__priceinfo-list span {
+    color: #0F172A !important;
+    font-weight: 600 !important;
+}
+.tpproduct__priceinfo-list-oldprice {
+    color: #94A3B8 !important;
+}
+
+/* 5. Minimalist Urban Badges */
+.tpproduct__thumb-topsall,
+.product__badge-item {
+    background-color: #0F172A !important;
+    color: #FFFFFF !important;
+    border-radius: 2px !important;
+    font-size: 10.5px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    padding: 2px 7px !important;
+}
+
+/* Special Sale Badge with subtle Amber Accent */
+.product__badge-list span[style*="328f0a"],
+.product__badge-list span[style*="green"],
+.tpproduct__thumb-topsall:has(.product__badge-item:contains("%")) {
+    background-color: #D97706 !important;
+}
+
+/* 6. Buttons & Calls to Action */
+.tp-btn, .tp-btn-2, .cart-btn, .checkout-button, .btn-primary, button[type="submit"] {
+    background-color: #0F172A !important;
+    border-color: #0F172A !important;
+    color: #FFFFFF !important;
+    border-radius: 4px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.2s ease !important;
+}
+.tp-btn:hover, .tp-btn-2:hover, .cart-btn:hover, .checkout-button:hover, .btn-primary:hover, button[type="submit"]:hover {
+    background-color: #1E293B !important;
+    border-color: #1E293B !important;
+    color: #FFFFFF !important;
+}
+
+/* 7. Action Icons (Wishlist, Quickview) */
+.tpproduct__thumb-action a {
+    background-color: #FFFFFF !important;
+    color: #0F172A !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 50% !important;
+    transition: all 0.2s ease !important;
+}
+.tpproduct__thumb-action a:hover {
+    background-color: #0F172A !important;
+    color: #FFFFFF !important;
+    border-color: #0F172A !important;
+}
+
+/* 8. Deep Slate Urban Footer */
+.footer-area {
+    background-color: #0F172A !important;
+    color: #F1F5F9 !important;
+    border-top: 1px solid #1E293B !important;
+}
+.footer-area a {
+    color: #94A3B8 !important;
+    transition: color 0.2s ease;
+}
+.footer-area a:hover {
+    color: #FFFFFF !important;
+}
+.footer-widget__title {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 13px !important;
+}
+.footer-copyright {
+    background-color: #020617 !important; /* Midnight Slate 950 */
+    border-top: 1px solid #1E293B !important;
+    color: #64748B !important;
+}
+
+/* 9. Breadcrumb */
+.tp-breadcrumb__area {
+    background-color: #F1F5F9 !important;
+}
+
+/* ==========================================================================
+   10. Mobile & Touch Screen Responsive Optimizations
+   ========================================================================== */
+
+/* 10.1 Product Title 2-Line Uniform Truncate */
+.tpproduct__title {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: normal !important;
+    min-height: 2.6em !important;
+    line-height: 1.3em !important;
+    margin-bottom: 6px !important;
+}
+
+.tpproduct__title a {
+    display: inline !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+}
+
+/* 10.2 Touch Screen & Mobile: Prevent Price Disappearance & Card Hover Glitch */
+@media (max-width: 991px), (hover: none) {
+    .tpproduct .tpproduct__priceinfo-list,
+    .tpproduct:hover .tpproduct__priceinfo-list {
+        visibility: visible !important;
+        opacity: 1 !important;
+        bottom: 0 !important;
+        transform: none !important;
+    }
+
+    .tpproduct .tpproduct__cart,
+    .tpproduct:hover .tpproduct__cart {
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        display: none !important;
+    }
+}
+
+/* 10.3 Mobile Header Cart Icon & Badge Polish */
+.tp-md-lg-header .header-meta-info .header-cart {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: #0F172A;
+    font-size: 19px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.tp-md-lg-header .header-meta-info .header-cart i {
+    font-size: 19px;
+}
+
+.tp-md-lg-header .header-meta-info .header-cart .tp-product-count {
+    background-color: #0F172A !important;
+    color: #FFFFFF !important;
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px !important;
+    border-radius: 50% !important;
+    top: -5px !important;
+    inset-inline-end: -8px !important;
+}
+
+/* ==========================================================================
+   11. Product Details Page & Quick View Mobile Action Buttons (< 768px)
+   ========================================================================== */
+@media (max-width: 767px) {
+    .tpproduct-details__count {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+    }
+
+    .tpproduct-details__count .tpproduct-details__quantity {
+        align-self: flex-start !important;
+        padding: 8px 16px !important;
+        margin-bottom: 2px !important;
+        border-radius: 6px !important;
+        border: 1px solid #E2E8F0 !important;
+    }
+
+    .tpproduct-details__count .tpproduct-details__cart {
+        display: flex !important;
+        width: 100% !important;
+        gap: 10px !important;
+    }
+
+    .tpproduct-details__count .tpproduct-details__cart button {
+        flex: 1 1 0 !important;
+        width: 50% !important;
+        min-height: 48px !important;
+        padding: 10px 8px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        border-radius: 6px !important;
+        white-space: nowrap !important;
+        letter-spacing: 0.3px !important;
+        box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08) !important;
+    }
+
+    .tpproduct-details__count .tpproduct-details__cart button.add-to-cart {
+        background-color: #0F172A !important;
+        border: 1px solid #0F172A !important;
+        color: #FFFFFF !important;
+    }
+
+    .tpproduct-details__count .tpproduct-details__cart button.buy-now {
+        background-color: #D97706 !important;
+        border: 1px solid #D97706 !important;
+        color: #FFFFFF !important;
+    }
+}
+
+/* ==========================================================================
+   12. Product Gallery Thumbnails Arrow Alignment Fix (< 768px)
+   ========================================================================== */
+@media (max-width: 767px) {
+    .product-gallery .product-thumbnails {
+        position: relative !important;
+        padding: 0 36px !important;
+        margin-top: 14px !important;
+    }
+
+    .product-gallery .product-thumbnails .slick-arrow {
+        position: absolute !important;
+        top: 50% !important;
+        bottom: auto !important;
+        transform: translateY(-50%) rotate(-90deg) !important;
+        width: 30px !important;
+        height: 30px !important;
+        line-height: 30px !important;
+        font-size: 11px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: #0F172A !important;
+        color: #FFFFFF !important;
+        border-radius: 50% !important;
+        z-index: 5 !important;
+        border: none !important;
+        opacity: 0.9 !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+        cursor: pointer !important;
+    }
+
+    .product-gallery .product-thumbnails .slick-arrow.slick-prev {
+        left: 2px !important;
+        right: auto !important;
+        top: 50% !important;
+    }
+
+    .product-gallery .product-thumbnails .slick-arrow.slick-next {
+        right: 2px !important;
+        left: auto !important;
+        top: 50% !important;
+        bottom: auto !important;
+    }
+}
+
+/* ==========================================================================
+   13. Cart Page Mobile Card-Style Layout (< 768px)
+   ========================================================================== */
+@media (max-width: 767px) {
+    .cart-area {
+        padding-top: 30px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .cart-area .table-content table thead {
+        display: none !important;
+    }
+
+    .cart-area .table-content table,
+    .cart-area .table-content table tbody,
+    .cart-area .table-content table tbody tr,
+    .cart-area .table-content table tbody tr td {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .cart-area .table-content table tbody tr {
+        position: relative !important;
+        margin-bottom: 18px !important;
+        padding: 16px !important;
+        background: #FFFFFF !important;
+        border: 1px solid #E2E8F0 !important;
+        border-radius: 10px !important;
+        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04) !important;
+    }
+
+    /* Product Thumbnail & Name Card Header */
+    .cart-area .table-content table tbody tr td.product-thumbnail {
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+        padding: 0 32px 14px 0 !important;
+        border-bottom: 1px solid #F1F5F9 !important;
+        text-align: left !important;
+    }
+
+    .cart-area .table-content table tbody tr td.product-thumbnail img {
+        width: 65px !important;
+        height: 65px !important;
+        min-width: 65px !important;
+        object-fit: cover !important;
+        border-radius: 8px !important;
+        border: 1px solid #E2E8F0 !important;
+    }
+
+    .cart-area .table-content table tbody tr td.product-thumbnail .product-name {
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        color: #0F172A !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        line-height: 1.35 !important;
+    }
+
+    /* Remove Button at Card Top-Right */
+    .cart-area .table-content table tbody tr td.product-remove {
+        position: absolute !important;
+        top: 14px !important;
+        right: 14px !important;
+        width: auto !important;
+        padding: 0 !important;
+        border: none !important;
+        z-index: 5 !important;
+    }
+
+    .cart-area .table-content table tbody tr td.product-remove a.remove-cart-item {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 28px !important;
+        height: 28px !important;
+        border-radius: 50% !important;
+        background-color: #FEE2E2 !important;
+        color: #EF4444 !important;
+        font-size: 13px !important;
+        transition: all 0.2s ease !important;
+    }
+
+    /* Price, Quantity & Subtotal Rows with Clean Alignment */
+    .cart-area .table-content table tbody tr td.product-price,
+    .cart-area .table-content table tbody tr td.product-quantity,
+    .cart-area .table-content table tbody tr td.product-subtotal {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 10px 0 !important;
+        border: none !important;
+        border-bottom: 1px dashed #F1F5F9 !important;
+        font-size: 14px !important;
+    }
+
+    .cart-area .table-content table tbody tr td.product-price::before,
+    .cart-area .table-content table tbody tr td.product-quantity::before,
+    .cart-area .table-content table tbody tr td.product-subtotal::before {
+        content: attr(data-title);
+        font-weight: 500 !important;
+        color: #64748B !important;
+        font-size: 13px !important;
+    }
+
+    .cart-area .table-content table tbody tr td.product-price .amount {
+        font-weight: 600 !important;
+        color: #0F172A !important;
+    }
+
+    .cart-area .table-content table tbody tr td.product-quantity .cart-plus,
+    .cart-area .table-content table tbody tr td.product-quantity .cart-minus {
+        width: 32px !important;
+        height: 34px !important;
+        line-height: 32px !important;
+        border-radius: 4px !important;
+    }
+
+    .cart-area .table-content table tbody tr td.product-quantity .cart-input {
+        width: 44px !important;
+        height: 34px !important;
+    }
+
+    .cart-area .table-content table tbody tr td.product-subtotal {
+        border-bottom: none !important;
+        padding-top: 12px !important;
+    }
+
+    .cart-area .table-content table tbody tr td.product-subtotal .amount {
+        color: #D97706 !important;
+        font-weight: 700 !important;
+        font-size: 15px !important;
+    }
+
+    /* Coupon Box Mobile Alignment */
+    .cart-area .coupon-all {
+        padding: 16px 0 !important;
+    }
+
+    .cart-area .coupon-all .coupon {
+        display: flex !important;
+        gap: 8px !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+        float: none !important;
+    }
+
+    .cart-area .coupon-all .coupon input.input-text {
+        flex: 1 1 160px !important;
+        height: 46px !important;
+        padding: 0 16px !important;
+        border-radius: 6px !important;
+        border: 1px solid #CBD5E1 !important;
+        margin-right: 0 !important;
+    }
+
+    .cart-area .coupon-all .coupon button.btn-apply-coupon-code {
+        flex: 0 0 auto !important;
+        height: 46px !important;
+        padding: 0 18px !important;
+        border-radius: 6px !important;
+    }
+
+    /* Cart Totals Summary Box */
+    .cart-page-total {
+        padding: 20px 16px !important;
+        border-radius: 10px !important;
+        margin-top: 20px !important;
+    }
+
+    .cart-page-total .tp-btn-h1 {
+        width: 100% !important;
+        text-align: center !important;
+        min-height: 48px !important;
+        line-height: 48px !important;
+        display: block !important;
+    }
+}
+
+/* ==========================================================================
+   14. Tablet Header Search Bar & Social Icons Optimization (768px - 1199px)
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .header-search-bar .product-category-label,
+    .header-search-bar .product-category-select {
+        display: none !important;
+    }
+
+    .header-search-bar input.has-category-select {
+        padding-left: 18px !important;
+    }
+
+    .header-meta__social {
+        margin-left: 12px !important;
+        gap: 10px !important;
+    }
+
+    .header-meta__social a,
+    .header-meta__social button {
+        margin-right: 0 !important;
+    }
+}
+
+/* ==========================================================================
+   15. Global Horizontal Overflow Lock
+   ========================================================================== */
+html, body {
+    overflow-x: clip !important;
+    max-width: 100% !important;
+}
+
+/* ==========================================================================
+   16. Footer CTA Contact Icon Fix (Prevent White-on-White Glitch)
+   ========================================================================== */
+.footer-cta__icon i {
+    width: 50px !important;
+    height: 50px !important;
+    line-height: 50px !important;
+    border-radius: 50% !important;
+    background-color: #FFFFFF !important;
+    color: #0F172A !important; /* Sharp high-contrast dark icon inside white circle */
+    font-size: 20px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-inline-end: 15px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+    transition: all 0.25s ease !important;
+}
+
+.footer-cta__contact:hover .footer-cta__icon i {
+    background-color: #25D366 !important; /* Turns emerald green on hover */
+    color: #FFFFFF !important;
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45) !important;
+    transform: scale(1.08);
+}
+
+.footer-cta__text a {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    transition: color 0.2s ease !important;
+}
+
+.footer-cta__text a:hover {
+    color: #25D366 !important;
+}
+
+.footer-cta__text span {
+    color: #94A3B8 !important;
+    font-size: 13.5px !important;
+}
+
+
