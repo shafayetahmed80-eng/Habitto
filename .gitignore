@@ -58,3 +58,4 @@ storage/framework/maintenance.php
 .claude/
 .mcp.json
 .taskmaster/
+*.zip

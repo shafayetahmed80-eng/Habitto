@@ -1,9 +1,9 @@
 @echo off
-title Habitto BD Local Server
+title Habbito Local Server
 cd /d "c:\Habitto"
 
 echo ===================================================
-echo             HABITTO BD LOCAL SERVER
+echo               HABBITO LOCAL SERVER
 echo ===================================================
 echo.
 echo [1/3] Checking MySQL database...

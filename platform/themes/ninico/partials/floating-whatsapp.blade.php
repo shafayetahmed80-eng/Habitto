@@ -16,7 +16,7 @@
     $position = theme_option('whatsapp_floating_position', 'bottom_right');
     $isRight = ($position !== 'bottom_left');
     $motionEffect = theme_option('whatsapp_motion_effect') ?: 'radar_pulse';
-    $defaultMessage = theme_option('whatsapp_default_message') ?: 'Assalamu Alaikum Habitto BD! I need assistance with an order.';
+    $defaultMessage = theme_option('whatsapp_default_message') ?: 'Assalamu Alaikum Habbito! I need assistance with an order.';
 @endphp
 
 <div id="habitto-floating-whatsapp" class="habitto-wa-pos-{{ $isRight ? 'right' : 'left' }} habitto-wa-motion-{{ $motionEffect }}">
@@ -25,7 +25,7 @@
         target="_blank"
         rel="noopener noreferrer"
         class="habitto-wa-btn"
-        title="Chat with Habitto BD on WhatsApp"
+        title="Chat with Habbito on WhatsApp"
         aria-label="Chat on WhatsApp"
     >
         @if ($motionEffect === 'radar_pulse')

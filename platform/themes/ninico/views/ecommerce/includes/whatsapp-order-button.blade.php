@@ -72,7 +72,7 @@ function orderOnWhatsApp(btn) {
     var qty = qtyInput ? (parseInt(qtyInput.value) || 1) : 1;
 
     // Compose formatted text for WhatsApp
-    var text = "Assalamu Alaikum Habitto BD!\n";
+    var text = "Assalamu Alaikum Habbito!\n";
     text += "আমি এই প্রডাক্টটি অর্ডার করতে চাই:\n\n";
     text += "🛍️ *Item:* " + productName + "\n";
     if (productSku) {
