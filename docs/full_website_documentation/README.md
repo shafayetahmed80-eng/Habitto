@@ -46,6 +46,7 @@ graph TD
 | **DOC-05** | **ডাটাবেজ স্কিমা ও রিলেশনশিপ** | ১৭০টি টেবিলের বিন্যাস, কোর টেবিল স্কিমা (`ec_products`, `ec_orders`, `ec_payments`, `settings`, `cities`), ফরেন কি সম্পর্ক, ই-আর ডায়াগ্রাম ও মাইগ্রেশন। | [05_DATABASE_SCHEMA_AND_DATA_RELATIONSHIPS.md](file:///c:/Habitto/docs/full_website_documentation/05_DATABASE_SCHEMA_AND_DATA_RELATIONSHIPS.md) |
 | **DOC-06** | **প্লাগইন ও কাস্টম মডিউল** | ২০টি সক্রিয় প্লাগইনের ম্যাট্রিক্স, ভাসমান হোয়াটসঅ্যাপ বাটন, কুইক-শপ বাই-নাউ বাটন, ডিল প্রোডাক্ট সিটিএ, বাংলাদেশ ৬৪ জেলা এবং বটবল হুক ও ফিল্টার। | [06_PLUGINS_AND_CUSTOM_MODULES.md](file:///c:/Habitto/docs/full_website_documentation/06_PLUGINS_AND_CUSTOM_MODULES.md) |
 | **DOC-07** | **ডেভঅপস, হোস্টিং ও সিকিউরিটি** | সার্ভার স্পেসিফিকেশন, লোকাল ডেভেলপমেন্ট কমান্ড, হোস্টিংগার লাইভ ডিপ্লয়মেন্ট গাইড (ডকুমেন্ট রুট `/public`, phpMyAdmin ইমপোর্ট, `.env` কনফিগ), সাইবার সিকিউরিটি ও সিডিএন। | [07_DEVOPS_HOSTING_AND_SECURITY.md](file:///c:/Habitto/docs/full_website_documentation/07_DEVOPS_HOSTING_AND_SECURITY.md) |
+| **DOC-08** | **মাল্টি-ল্যাপটপ Git ও লাইভ আপডেট গাইড** | নতুন ল্যাপটপে সেটআপ, Hostinger-এ প্রথমবার Git সংযোগ, PR ওয়ার্কফ্লো, ১-কমান্ডে `update.sh` লাইভ আপডেট, রোলব্যাক এবং ট্রাবলশুটিং। | [08_MULTI_DEVICE_GIT_AND_LIVE_UPDATE_GUIDE.md](file:///c:/Habitto/docs/full_website_documentation/08_MULTI_DEVICE_GIT_AND_LIVE_UPDATE_GUIDE.md) |
 
 ---
 
