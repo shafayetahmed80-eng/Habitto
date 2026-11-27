@@ -20,6 +20,12 @@ class HabittoLuxuryHomeServiceProvider extends ServiceProvider
         View::addNamespace('habitto-luxury', resource_path('views/luxury-home'));
 
         app()->booted(function (): void {
+            if (defined('THEME_FRONT_HEADER')) {
+                add_filter(THEME_FRONT_HEADER, function (?string $html): string {
+                    return (string) $html . view('habitto-luxury::partials.global-head')->render();
+                }, 999);
+            }
+
             if (function_exists('register_page_template')) {
                 register_page_template([
                     'luxury-home' => 'Quiet Luxury Homepage (GW Style)',

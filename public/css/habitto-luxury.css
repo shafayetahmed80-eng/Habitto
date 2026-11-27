@@ -1,35 +1,470 @@
 /* ==========================================================================
-   HABBITO — SCOPED QUIET-LUXURY HOMEPAGE STYLESHEET
-   Loaded ONLY on `layouts/luxury-home.blade.php` (`body.gw-luxury-home`)
-   Zero impact on Ninico theme files, Custom CSS, or inner pages.
+   HABBITO — UNIFIED QUIET-LUXURY BRAND DESIGN SYSTEM (v2.0)
+   Loaded globally after style.integration.css via THEME_FRONT_HEADER
+   Zero edits to platform/themes/ninico/ (100% Theme-Update-Safe)
+   Palette: Warm Parchment (#FDF6EE), Warm Stone (#F5F1EA), Deep Charcoal (#252525)
    ========================================================================== */
 
-body.gw-luxury-home {
+/* --------------------------------------------------------------------------
+   PART A: GLOBAL & INNER PAGES UNIFIED PALETTE + TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+:root {
+    --primary-color: #252525 !important;
+    --primary-color-rgb: 37, 37, 37 !important;
+    --header-background-color: #FDF6EE !important;
+    --header-text-color: #252525 !important;
+    --header-menu-text-color: #252525 !important;
+    --header-menu-text-hover-color: #55526B !important;
+}
+
+html, body {
+    overflow-x: clip !important;
+    max-width: 100% !important;
+}
+
+body {
     background-color: #FDF6EE !important;
     color: #252525 !important;
     font-family: 'Playfair Display', 'Trirong', Georgia, serif !important;
     font-variant-numeric: lining-nums tabular-nums;
-    font-size: 16px;
-    line-height: 1.65;
-    letter-spacing: 0.02em;
     -webkit-font-smoothing: antialiased;
-    overflow-x: clip !important;
 }
 
-body.gw-luxury-home h1,
-body.gw-luxury-home h2,
-body.gw-luxury-home h3,
-body.gw-luxury-home h4,
-body.gw-luxury-home h5,
-body.gw-luxury-home h6 {
+h1, h2, h3, h4, h5, h6,
+.tpsection__title,
+.tpproduct-details__title,
+.product-sidebar__title,
+.tp-breadcrumb__title,
+.cart-page-total h2 {
     font-family: 'Trirong', 'Playfair Display', Georgia, serif !important;
     color: #252525;
     letter-spacing: 0.01em;
 }
 
-/* Hide intrusive popups, cookie banners & duplicate sticky bars on Luxury Home */
+/* Top Announcement Bar (Inner Pages) */
+.header-top,
+.header-top.space-bg {
+    background-color: #252525 !important;
+    color: #FDF6EE !important;
+    border-bottom: 1px solid rgba(253, 246, 238, 0.12) !important;
+}
+
+.ae-anno-announcement-wrapper {
+    --background-color: #252525 !important;
+    --text-color: #FDF6EE !important;
+}
+
+.header-top a,
+.header-top a i,
+.header-top a svg,
+.header-welcome-text span {
+    color: #FDF6EE !important;
+}
+
+/* Unified Cream Header & Logo Mark (All Pages) */
+.gw-header,
+.main-header,
+#header-sticky,
+.header-sticky,
+.tp-md-lg-header {
+    background-color: #FDF6EE !important;
+    border-bottom: 1px solid rgba(37, 37, 37, 0.08) !important;
+    box-shadow: none !important;
+}
+
+.logo img,
+.gw-logo__mark {
+    height: 40px !important;
+    width: 40px !important;
+    object-fit: contain !important;
+    border-radius: 6px;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.logo a:hover img,
+.gw-logo__link:hover .gw-logo__mark {
+    transform: scale(1.04);
+}
+
+.main-menu > nav > ul > li > a {
+    font-family: 'Playfair Display', 'Trirong', Georgia, serif !important;
+    color: #252525 !important;
+    font-weight: 400 !important;
+    font-size: 14.5px !important;
+    letter-spacing: 0.02em !important;
+}
+
+.main-menu > nav > ul > li:hover > a {
+    color: #252525 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 4px;
+}
+
+.main-menu > nav > ul > li .submenu {
+    background-color: #FDF6EE !important;
+    border: 1px solid rgba(37, 37, 37, 0.12) !important;
+    border-radius: 6px !important;
+    box-shadow: 0 12px 30px rgba(37, 37, 37, 0.08) !important;
+}
+
+.main-menu > nav > ul > li .submenu li a {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    color: #252525 !important;
+}
+
+.main-menu > nav > ul > li .submenu li a:hover {
+    background-color: #F5F1EA !important;
+    color: #252525 !important;
+}
+
+/* Inner Header Search & Icons */
+.mainmenu__search-bar input,
+.header-search-bar input {
+    background-color: #F5F1EA !important;
+    border: 1px solid rgba(37, 37, 37, 0.14) !important;
+    border-radius: 6px !important;
+    color: #252525 !important;
+}
+
+.mainmenu__search-bar input:focus,
+.header-search-bar input:focus {
+    background-color: #FFFFFF !important;
+    border-color: #252525 !important;
+    box-shadow: 0 4px 12px rgba(37, 37, 37, 0.06) !important;
+}
+
+.mainmenu__search-icon,
+.header-meta__social a,
+.header-meta__social button,
+.tp-md-lg-header .tp-menu-toggle,
+.tp-md-lg-header .header-meta-info .header-cart {
+    color: #252525 !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.tp-product-count,
+.tp-product-wishlist-count,
+.tp-product-compare-count,
+.gw-bag-count,
+.tp-md-lg-header .header-meta-info .header-cart .tp-product-count {
+    background-color: #252525 !important;
+    color: #FDF6EE !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
+    font-size: 10px !important;
+    font-weight: 600 !important;
+}
+
+/* Inner Page Breadcrumb (Removes ugly 1920x200 grey placeholder image) */
+.breadcrumb__area,
+.tp-breadcrumb__bg,
+.tp-breadcrumb__area,
+.breadcrumb__bg {
+    background-image: none !important;
+    background-color: #F5F1EA !important;
+    border-bottom: 1px solid rgba(37, 37, 37, 0.08) !important;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+}
+
+.tp-breadcrumb__link span,
+.tp-breadcrumb__link a,
+.tp-breadcrumb__list span,
+.tp-breadcrumb__list a {
+    color: #252525 !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+}
+
+/* Inner Shop Sidebar & Filter Controls */
+.tpshop__widget,
+.product-sidebar__widget,
+.tpshop__leftbar {
+    background-color: transparent !important;
+}
+
+.product-sidebar .ui-widget-content {
+    background: rgba(37, 37, 37, 0.14) !important;
+}
+
+.product-sidebar .ui-slider-range,
+.product-sidebar .ui-slider-handle,
+.price-filter .ui-slider-range,
+.price-filter .ui-slider-handle {
+    background-color: #252525 !important;
+    border-color: #252525 !important;
+}
+
+.nice-select {
+    background-color: #F5F1EA !important;
+    border: 1px solid rgba(37, 37, 37, 0.14) !important;
+    color: #252525 !important;
+}
+
+.nice-select .list {
+    background-color: #FDF6EE !important;
+    border: 1px solid rgba(37, 37, 37, 0.14) !important;
+}
+
+/* Inner Shop Product Cards (.tpproduct) */
+.tpproduct {
+    background: #FBF6EE !important;
+    border: 1px solid rgba(37, 37, 37, 0.10) !important;
+    border-radius: 8px !important;
+    padding: 10px 10px 16px 10px !important;
+    box-shadow: none !important;
+    transition: border-color 0.25s ease, transform 0.25s ease !important;
+}
+
+.tpproduct:hover {
+    border-color: rgba(37, 37, 37, 0.34) !important;
+    box-shadow: 0 10px 24px rgba(37, 37, 37, 0.06) !important;
+    transform: translateY(-2px);
+}
+
+.tpproduct__thumb {
+    background-color: #EEE8DF !important;
+    border-radius: 6px !important;
+    overflow: hidden;
+}
+
+/* Prevent hover flip onto 370x330 secondary placeholder images */
+.tpproduct__thumb img.product-thumb-secondary {
+    display: none !important;
+}
+
+.tpproduct__thumb a > img:first-child {
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.tpproduct:hover .tpproduct__thumb a > img:first-child {
+    transform: scale(1.035) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.tpproduct__title a {
+    font-family: 'Trirong', 'Playfair Display', Georgia, serif !important;
+    color: #252525 !important;
+    font-weight: 500 !important;
+}
+
+.tpproduct__title a:hover {
+    color: #252525 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+}
+
+.tpproduct__priceinfo-list span,
+.bb-product-price-text {
+    color: #252525 !important;
+    font-weight: 600 !important;
+    font-variant-numeric: lining-nums tabular-nums;
+}
+
+.tpproduct__priceinfo-list-oldprice,
+.product-price-original {
+    color: rgba(37, 37, 37, 0.48) !important;
+}
+
+/* Unified Solid Charcoal Badges (High-contrast, zero transparency) */
+.product__badge-list,
+.tpproduct__thumb-topsall,
+.product__badge-item {
+    opacity: 1 !important;
+}
+
+.tpproduct__thumb-topsall,
+.product__badge-list span[style*="328f0a"],
+.product__badge-list span[style*="green"],
+.product__badge-list span[style*="ff0000"] {
+    background: #252525 !important;
+    background-color: #252525 !important;
+    color: #FDF6EE !important;
+    border-radius: 4px !important;
+    padding: 3px 8px !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18) !important;
+}
+
+.product__badge-item {
+    background: transparent !important;
+    color: #FDF6EE !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-variant-numeric: lining-nums;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.05em !important;
+    padding: 0 !important;
+}
+
+.tpproduct__thumb-action a {
+    background-color: #FDF6EE !important;
+    color: #252525 !important;
+    border: 1px solid rgba(37, 37, 37, 0.14) !important;
+}
+
+.tpproduct__thumb-action a:hover {
+    background-color: #252525 !important;
+    color: #FDF6EE !important;
+    border-color: #252525 !important;
+}
+
+/* Global Buttons, Forms, Cart & Checkout */
+.tp-btn,
+.tp-btn-2,
+.cart-btn,
+.checkout-button,
+.btn-primary,
+button[type="submit"],
+.tpproduct-details__count .tpproduct-details__cart button.add-to-cart {
+    background-color: #252525 !important;
+    border-color: #252525 !important;
+    color: #FDF6EE !important;
+    border-radius: 6px !important;
+    font-family: 'Playfair Display', 'Trirong', Georgia, serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.03em !important;
+}
+
+.tp-btn:hover,
+.tp-btn-2:hover,
+.cart-btn:hover,
+.checkout-button:hover,
+.btn-primary:hover,
+button[type="submit"]:hover {
+    background-color: #383838 !important;
+    border-color: #383838 !important;
+    color: #FFFFFF !important;
+}
+
+button.buy-now,
+.tpproduct-details__count .tpproduct-details__cart button.buy-now {
+    background-color: #F5F1EA !important;
+    border: 1px solid #252525 !important;
+    color: #252525 !important;
+    border-radius: 6px !important;
+}
+
+button.buy-now:hover {
+    background-color: #EBE3D6 !important;
+    color: #252525 !important;
+}
+
+.cart-area .table-content table tbody tr td.product-subtotal .amount {
+    color: #252525 !important;
+}
+
+/* Unified Deep Charcoal Footer (Inner Pages) */
+.footer-area {
+    background-color: #252525 !important;
+    color: #FDF6EE !important;
+    border-top: 1px solid rgba(253, 246, 238, 0.10) !important;
+}
+
+.footer-area a,
+.footer-cta__text span {
+    color: rgba(253, 246, 238, 0.74) !important;
+}
+
+.footer-area a:hover,
+.footer-cta__text a:hover {
+    color: #FDF6EE !important;
+}
+
+.footer-widget__title,
+.footer-cta__text a {
+    color: #FDF6EE !important;
+    font-family: 'Trirong', 'Playfair Display', Georgia, serif !important;
+}
+
+.footer-cta__icon i {
+    background-color: #FDF6EE !important;
+    color: #252525 !important;
+}
+
+.footer-cta__contact:hover .footer-cta__icon i {
+    background-color: #3A3A3A !important;
+    color: #FDF6EE !important;
+    box-shadow: none !important;
+}
+
+.footer-copyright {
+    background-color: #1C1C1C !important;
+    border-top: 1px solid rgba(253, 246, 238, 0.10) !important;
+    color: rgba(253, 246, 238, 0.68) !important;
+}
+
+.footer-copyright__brand img[src*="payment"],
+.footer-copyright__brand img[src*="placeholder"],
+.footer-copyright img {
+    display: none !important;
+}
+
+/* Harmonize Inner Page Floating WhatsApp Button (#1B1B1B + Cream) */
+#habitto-floating-whatsapp .habitto-wa-btn {
+    background: #1B1B1B !important;
+    color: #FDF6EE !important;
+    border: 1px solid rgba(253, 246, 238, 0.18) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.24) !important;
+    animation: none !important;
+}
+
+#habitto-floating-whatsapp .habitto-wa-btn:hover {
+    background: #252525 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.32) !important;
+}
+
+#habitto-floating-whatsapp .habitto-wa-pulse {
+    display: none !important;
+}
+
+/* Off-Canvas Drawers & Mobile Bottom Bar (All Pages) */
+.tpsideinfo,
+.tpcartinfo {
+    background-color: #FDF6EE !important;
+    color: #252525 !important;
+}
+
+.tpsideinfo .tpsideinfo__search-title,
+.tpsideinfo a,
+.tpsideinfo .nav-link,
+.tpcart__title {
+    color: #252525 !important;
+    font-family: 'Trirong', 'Playfair Display', Georgia, serif !important;
+}
+
+.tpsideinfo__search input.input-search-product {
+    background-color: #FFFFFF !important;
+    color: #252525 !important;
+    border: 1px solid rgba(37, 37, 37, 0.22) !important;
+    border-radius: 6px !important;
+}
+
+.tpsideinfo__search form button {
+    color: #252525 !important;
+    background: transparent !important;
+}
+
+.tpsideinfo__close,
+.tpcart__close {
+    background-color: #252525 !important;
+    color: #FDF6EE !important;
+}
+
+.tp-bottom-menu-sticky {
+    background-color: #FDF6EE !important;
+    border-top: 1px solid rgba(37, 37, 37, 0.10) !important;
+}
+
+.js-cookie-consent {
+    display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   PART B: LUXURY HOMEPAGE SECTIONS (`body.gw-luxury-home`)
+   -------------------------------------------------------------------------- */
 body.gw-luxury-home #header-sticky,
-body.gw-luxury-home .js-cookie-consent,
 body.gw-luxury-home .newsletter-popup,
 body.gw-luxury-home #newsletter-popup {
     display: none !important;
@@ -53,14 +488,6 @@ body.gw-luxury-home .ck-content > div {
     margin: 0;
 }
 
-/* 1. Minimalist Sticky Cream Header */
-body.gw-luxury-home .gw-header,
-body.gw-luxury-home .tp-md-lg-header {
-    background-color: #FDF6EE !important;
-    border-bottom: 1px solid rgba(37, 37, 37, 0.08) !important;
-    box-shadow: none !important;
-}
-
 body.gw-luxury-home .gw-header {
     position: sticky;
     top: 0;
@@ -71,25 +498,14 @@ body.gw-luxury-home .gw-header__inner {
     min-height: 66px !important;
 }
 
-body.gw-luxury-home .gw-logo__link,
-body.gw-luxury-home .tp-md-lg-header .logo a {
+body.gw-luxury-home .gw-logo__link {
     text-decoration: none !important;
     display: inline-flex;
     align-items: center;
 }
 
-body.gw-luxury-home .gw-logo__wordmark {
-    font-family: 'Playfair Display', 'Trirong', Georgia, serif;
-    font-weight: 700;
-    font-size: 29px;
-    line-height: 1;
-    letter-spacing: -0.03em;
-    color: #252525 !important;
-    text-transform: lowercase;
-}
-
 body.gw-luxury-home .gw-nav-wrap {
-    margin-inline-start: 48px !important;
+    margin-inline-start: 42px !important;
 }
 
 body.gw-luxury-home .gw-main-menu > nav > ul {
@@ -108,11 +524,6 @@ body.gw-luxury-home .gw-main-menu > nav > ul > li {
 }
 
 body.gw-luxury-home .gw-main-menu > nav > ul > li > a {
-    font-family: 'Playfair Display', 'Trirong', Georgia, serif !important;
-    color: #252525 !important;
-    font-weight: 400 !important;
-    font-size: 14.5px !important;
-    letter-spacing: 0.02em !important;
     padding: 20px 0 !important;
     text-decoration: none !important;
     display: inline-flex !important;
@@ -127,35 +538,6 @@ body.gw-luxury-home .gw-main-menu > nav > ul > li.has-dropdown > a::after {
     font-size: 12px;
     margin-left: 3px;
     opacity: 0.75;
-}
-
-body.gw-luxury-home .gw-main-menu > nav > ul > li:hover > a {
-    color: #252525 !important;
-    text-decoration: underline !important;
-    text-underline-offset: 4px;
-}
-
-body.gw-luxury-home .gw-main-menu > nav > ul > li .submenu {
-    background-color: #FDF6EE !important;
-    border: 1px solid rgba(37, 37, 37, 0.12) !important;
-    border-radius: 6px !important;
-    box-shadow: 0 12px 30px rgba(37, 37, 37, 0.08) !important;
-    padding: 12px 0 !important;
-    min-width: 210px !important;
-}
-
-body.gw-luxury-home .gw-main-menu > nav > ul > li .submenu li a {
-    font-family: 'Playfair Display', Georgia, serif !important;
-    color: #252525 !important;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-    padding: 8px 22px !important;
-}
-
-body.gw-luxury-home .gw-main-menu > nav > ul > li .submenu li a:hover {
-    background-color: #F5F1EA !important;
-    color: #252525 !important;
-    padding-left: 25px !important;
 }
 
 body.gw-luxury-home .gw-header__icons {
@@ -181,16 +563,10 @@ body.gw-luxury-home .gw-icon-btn:hover {
     opacity: 0.72;
 }
 
-body.gw-luxury-home .gw-bag-count,
-body.gw-luxury-home .tp-md-lg-header .header-meta-info .header-cart .tp-product-count {
+body.gw-luxury-home .gw-bag-count {
     position: absolute;
     top: -3px !important;
     inset-inline-end: -5px !important;
-    background-color: #252525 !important;
-    color: #FDF6EE !important;
-    font-family: 'Jost', system-ui, sans-serif !important;
-    font-size: 10px !important;
-    font-weight: 600 !important;
     width: 16px !important;
     height: 16px !important;
     line-height: 16px !important;
@@ -199,37 +575,14 @@ body.gw-luxury-home .tp-md-lg-header .header-meta-info .header-cart .tp-product-
 }
 
 body.gw-luxury-home .tp-md-lg-header {
-    padding-top: 14px !important;
-    padding-bottom: 14px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
     position: sticky;
     top: 0;
     z-index: 985;
 }
 
-body.gw-luxury-home .tp-md-lg-header .tp-menu-toggle,
-body.gw-luxury-home .tp-md-lg-header .header-meta-info .header-cart,
-body.gw-luxury-home .tp-md-lg-header .header-meta__social a {
-    background: transparent !important;
-    border: none !important;
-    color: #252525 !important;
-    font-size: 19px;
-}
-
-/* Replace square green icon logo on mobile/tablet bar with clean serif wordmark */
-body.gw-luxury-home .tp-md-lg-header .logo img {
-    display: none !important;
-}
-body.gw-luxury-home .tp-md-lg-header .logo a::after {
-    content: "habbito";
-    font-family: 'Playfair Display', 'Trirong', Georgia, serif;
-    font-weight: 700;
-    font-size: 25px;
-    letter-spacing: -0.03em;
-    color: #252525;
-    line-height: 1;
-}
-
-/* 2. Section 1 — Full-Bleed Editorial Hero */
+/* Section 1 — Editorial Hero */
 body.gw-luxury-home .gw-hero {
     width: 100%;
     background-color: #1F1A17;
@@ -261,12 +614,7 @@ body.gw-luxury-home .gw-hero__frame:hover .gw-hero__img {
 body.gw-luxury-home .gw-hero__gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(18, 14, 11, 0.06) 0%,
-        rgba(18, 14, 11, 0.14) 52%,
-        rgba(18, 14, 11, 0.62) 100%
-    );
+    background: linear-gradient(180deg, rgba(18, 14, 11, 0.06) 0%, rgba(18, 14, 11, 0.14) 52%, rgba(18, 14, 11, 0.62) 100%);
     pointer-events: none;
 }
 
@@ -284,7 +632,6 @@ body.gw-luxury-home .gw-hero__script {
     display: block;
     font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
     font-style: italic;
-    font-weight: 400;
     font-size: clamp(30px, 3.4vw, 48px);
     line-height: 1;
     color: #F6EFE4;
@@ -307,7 +654,6 @@ body.gw-luxury-home .gw-hero__eyebrow {
     display: block;
     font-family: 'Playfair Display', 'Trirong', Georgia, serif;
     font-style: italic;
-    font-weight: 400;
     font-size: clamp(14px, 1.5vw, 22px);
     letter-spacing: 0.42em;
     padding-left: 0.42em;
@@ -316,7 +662,7 @@ body.gw-luxury-home .gw-hero__eyebrow {
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.38);
 }
 
-/* 3. Shared Section Headings & Arrows */
+/* Shared Section Headings */
 body.gw-luxury-home .gw-section {
     background-color: #FDF6EE;
     padding-top: 44px;
@@ -337,11 +683,10 @@ body.gw-luxury-home .gw-arrow {
     display: inline-block;
     margin-left: 4px;
     font-family: system-ui, -apple-system, sans-serif;
-    font-weight: 400;
     transition: transform 0.2s ease;
 }
 
-/* 4. Section 2 — Shop by Category (5-Column 1:1 Studio Squares) */
+/* Section 2 — Shop by Category */
 body.gw-luxury-home .gw-cat-grid {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -401,7 +746,7 @@ body.gw-luxury-home .gw-cat-card:hover .gw-arrow {
     transform: translateX(3px);
 }
 
-/* 5. Section 3 — Habbito Atelier Split Banner */
+/* Section 3 — Habbito Atelier Split Banner */
 body.gw-luxury-home .gw-atelier-section {
     padding-top: 32px;
     padding-bottom: 44px;
@@ -492,7 +837,6 @@ body.gw-luxury-home .gw-btn-cream {
     font-family: 'Playfair Display', 'Trirong', Georgia, serif;
     font-size: 14.5px;
     font-weight: 600;
-    letter-spacing: 0.02em;
     text-decoration: none !important;
     border: 1px solid #FDF6EE;
     transition: background-color 0.2s ease, transform 0.2s ease;
@@ -504,7 +848,7 @@ body.gw-luxury-home .gw-btn-cream:hover {
     transform: translateY(-1px);
 }
 
-/* 6. Section 4 — Inverse Charcoal Campaign & Lookbook (#252525) */
+/* Section 4 — Inverse Charcoal Campaign & Lookbook */
 body.gw-luxury-home .gw-inverse-band {
     background-color: #252525;
     color: #FDF6EE;
@@ -645,7 +989,7 @@ body.gw-luxury-home .gw-look-card:hover .gw-arrow {
     transform: translateX(3px);
 }
 
-/* 7. Section 5 — Minimalist 4:5 New Arrivals Grid */
+/* Section 5 — Homepage 4:5 Minimalist New Arrivals Grid */
 body.gw-luxury-home .gw-new-arrivals {
     padding-top: 44px;
     padding-bottom: 52px;
@@ -749,7 +1093,6 @@ body.gw-luxury-home .gw-product-card__price {
     font-size: 14.5px;
     font-weight: 500;
     color: #252525;
-    letter-spacing: 0.02em;
 }
 
 body.gw-luxury-home .gw-view-all-wrap {
@@ -765,14 +1108,13 @@ body.gw-luxury-home .gw-underlined-link {
     text-decoration: underline !important;
     text-underline-offset: 5px;
     text-decoration-thickness: 1px;
-    transition: opacity 0.2s ease;
 }
 
 body.gw-luxury-home .gw-underlined-link:hover {
     opacity: 0.68;
 }
 
-/* 8. Single-Band Minimalist Charcoal Footer & Floating Chat Pill */
+/* Section 6 — Homepage Single-Band Footer & Chat Pill */
 body.gw-luxury-home .gw-footer__band {
     background-color: #252525 !important;
     color: #FDF6EE !important;
@@ -799,7 +1141,6 @@ body.gw-luxury-home .gw-footer__social-link {
 body.gw-luxury-home .gw-footer__social-link:hover {
     opacity: 1;
     transform: translateY(-2px);
-    color: #FFFFFF !important;
 }
 
 body.gw-luxury-home .gw-footer__divider {
@@ -816,7 +1157,6 @@ body.gw-luxury-home .gw-footer__bottom {
     justify-content: center;
     gap: 8px;
     font-family: 'Playfair Display', 'Trirong', Georgia, serif;
-    font-variant-numeric: lining-nums;
     font-size: 13px;
     color: rgba(253, 246, 238, 0.76);
     text-align: center;
@@ -830,7 +1170,6 @@ body.gw-luxury-home .gw-footer__bottom a {
 body.gw-luxury-home .gw-footer__bottom a:hover {
     color: #FFFFFF !important;
     text-decoration: underline !important;
-    text-underline-offset: 3px;
 }
 
 body.gw-luxury-home .gw-footer__dot {
@@ -857,58 +1196,18 @@ body.gw-luxury-home .gw-chat-pill {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 14.5px;
-    letter-spacing: 0.02em;
     text-decoration: none !important;
-    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 body.gw-luxury-home .gw-chat-pill:hover {
     background-color: #252525;
     color: #FFFFFF !important;
     transform: translateY(-2px);
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.30);
 }
 
 body.gw-luxury-home .scroll-top.open {
     bottom: 78px !important;
-}
-
-/* 9. Off-Canvas Drawers Opened While on Homepage */
-body.gw-luxury-home .tpsideinfo,
-body.gw-luxury-home .tpcartinfo {
-    background-color: #FDF6EE !important;
-    color: #252525 !important;
-}
-
-body.gw-luxury-home .tpsideinfo .tpsideinfo__search-title,
-body.gw-luxury-home .tpsideinfo a,
-body.gw-luxury-home .tpsideinfo .nav-link,
-body.gw-luxury-home .tpcart__title {
-    color: #252525 !important;
-    font-family: 'Trirong', 'Playfair Display', Georgia, serif !important;
-}
-
-body.gw-luxury-home .tpsideinfo__search input.input-search-product {
-    background-color: #FFFFFF !important;
-    color: #252525 !important;
-    border: 1px solid rgba(37, 37, 37, 0.22) !important;
-    border-radius: 6px !important;
-}
-
-body.gw-luxury-home .tpsideinfo__search form button {
-    color: #252525 !important;
-    background: transparent !important;
-}
-
-body.gw-luxury-home .tpsideinfo__close,
-body.gw-luxury-home .tpcart__close {
-    background-color: #252525 !important;
-    color: #FDF6EE !important;
-}
-
-body.gw-luxury-home .tp-bottom-menu-sticky {
-    background-color: #FDF6EE !important;
-    border-top: 1px solid rgba(37, 37, 37, 0.10) !important;
 }
 
 @media (max-width: 768px) {
