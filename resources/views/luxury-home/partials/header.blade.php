@@ -1,8 +1,3 @@
-@php
-    $logoImg = theme_option('logo') ?: 'general/habitto-logo-luxury.png';
-    $logoUrl = RvMedia::getImageUrl($logoImg, null, false, url('/storage/general/habitto-logo-luxury.png'));
-@endphp
-
 <header class="gw-header" id="gw-sticky-header">
     <div class="d-none d-xl-block">
         <div class="gw-page-width">
@@ -10,7 +5,7 @@
                 <div class="d-flex align-items-center flex-grow-1 min-w-0">
                     <div class="flex-shrink-0">
                         <a href="{{ BaseHelper::getHomepageUrl() }}" class="gw-logo__link" aria-label="Habbito">
-                            <img src="{{ $logoUrl }}" alt="{{ theme_option('site_title', 'Habbito') }}" class="gw-logo__mark">
+                            <span class="gw-logo__wordmark">habbito</span>
                         </a>
                     </div>
                     <div class="gw-nav-wrap d-flex align-items-center p-relative">
